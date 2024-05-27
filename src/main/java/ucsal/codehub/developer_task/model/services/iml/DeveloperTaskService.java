@@ -47,9 +47,13 @@ public class DeveloperTaskService implements AssignedTaskService<DeveloperTask> 
     }
 
     @Override
-    public void updateAssignedTask(DeveloperTask assignedTask) {
+    public void updateAssignedTask(DeveloperTask developerTask) {
         try {
-            tasks.stream().filter(task -> task.getId() == assignedTask.getId()).findFirst().ifPresentOrElse(task -> updateTask(task, assignedTask), () -> {throw new PersonNotFound("Developer not found");});
+            if (Util.SkillLevelCheck(developerTask.getPerson(), developerTask.getSkillLevel())){
+                tasks.stream().filter(task -> task.getId() == developerTask.getId()).findFirst().ifPresentOrElse(task -> updateTask(task, developerTask), () -> {throw new PersonNotFound("Developer not found");});
+            } else {
+                throw new DeveloperWithoutPermission("The skill level check failed");
+            }
         } catch (PersonNotFound e){
             e.printStackTrace();
         } catch (RuntimeException e){
@@ -63,9 +67,9 @@ public class DeveloperTaskService implements AssignedTaskService<DeveloperTask> 
             return tasks.stream().filter(task -> task.getId() == id).findFirst().orElseThrow(() -> new PersonNotFound("Developer not found"));
         } catch (PersonNotFound e){
             e.printStackTrace();
+            return null;
         } catch (RuntimeException e){
             e.printStackTrace();
-        } finally {
             return null;
         }
     }
@@ -80,9 +84,9 @@ public class DeveloperTaskService implements AssignedTaskService<DeveloperTask> 
             }
         } catch (EmptyList e){
             e.printStackTrace();
+            return null;
         } catch (RuntimeException e){
             e.printStackTrace();
-        } finally {
             return null;
         }
     }
@@ -97,9 +101,9 @@ public class DeveloperTaskService implements AssignedTaskService<DeveloperTask> 
             }
         } catch (EmptyList e){
             e.printStackTrace();
+            return null;
         } catch (RuntimeException e){
             e.printStackTrace();
-        } finally {
             return null;
         }
     }
@@ -114,9 +118,9 @@ public class DeveloperTaskService implements AssignedTaskService<DeveloperTask> 
             }
         } catch (EmptyList e){
             e.printStackTrace();
+            return null;
         } catch (RuntimeException e){
             e.printStackTrace();
-        } finally {
             return null;
         }
     }

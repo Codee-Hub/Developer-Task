@@ -4,10 +4,12 @@ import ucsal.codehub.developer_task.model.entities.Developer;
 import ucsal.codehub.developer_task.model.services.iml.DeveloperService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DeveloperServiceFactory {
 
     public static DeveloperService getDeveloperService() {
-        return new DeveloperService(new ArrayList<Developer>());
+        List<Developer> developers = new ArrayList<Developer>();
+        return new DeveloperService(developers);
     }
 }

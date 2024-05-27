@@ -52,9 +52,9 @@ public class DeveloperService implements PersonService<Developer> {
             return developers.stream().filter(dev -> dev.getId() == id).findFirst().orElseThrow( () -> new PersonNotFound("Person not found"));
         } catch (PersonNotFound e) {
             e.printStackTrace();
+            return null;
         } catch (Exception e ) {
             e.printStackTrace();
-        } finally {
             return null;
         }
     }
@@ -62,15 +62,15 @@ public class DeveloperService implements PersonService<Developer> {
     @Override
     public List<Developer> getPersons() {
         try {
-            if (developers.size() == 0) {
+            if (developers.isEmpty()) {
                 throw new EmptyList("The list of developers is empty");
             }
             return developers;
         } catch (EmptyList e){
             e.printStackTrace();
+            return null;
         } catch (Exception e ) {
             e.printStackTrace();
-        } finally {
             return null;
         }
     }

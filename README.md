@@ -23,7 +23,7 @@ This project is a simple Java application for managing tasks and devs. Each task
 ## Screenshots
 
 ### Class Diagram
-![Class Diagram](diagrama.png)
+![Class Diagram](src/img/diagrama.png)
 
 
 ## Technologies Used

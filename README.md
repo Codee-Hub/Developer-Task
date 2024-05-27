@@ -25,6 +25,18 @@ This project is a simple Java application for managing tasks and devs. Each task
 ### Class Diagram
 ![Class Diagram](src/img/diagrama.png)
 
+### DeveloperTask Entity
+![AssignedTask](src/img/AssignedTask.png)
+![AssignedTask](src/img/developertask.png)
+
+### SkillLevel System
+![skillevel](src/img/skilllevel.png)  
+![util](src/img/util.png)  
+![exceptions](src/img/exception.png)  
+
+### DeveloperTask Service
+![Terminal](src/img/terminalk.png)
+![developertaskservice](src/img/developertaskservice.png)
 
 ## Technologies Used
 
@@ -32,9 +44,13 @@ This project is a simple Java application for managing tasks and devs. Each task
 
 ## Contributors
 
-- [CauZy-Dev](https://github.com/cauzy-dev)
+- [CauZy-Dev](https://github.com/cauzy-dev) Cauã Goes
+- [Yan-Pi](https://github.com/yan-pi) Yan Fernandes
+- [Zadriw](https://github.com/ZadriW) Adriano Abreu
+- [CauZy-Dev](https://github.com/cauzy-dev) Guilherme Andrade
+- [CauZy-Dev](https://github.com/cauzy-dev) Kailan Souza
 
 ## License
 
-This project is licensed under the [Licença MIT](https://github.com/Codee-Hub/Lista-De-Tarefas-Designadas/blob/main/LICENSE).
+This project is licensed under the [Licença MIT](https://github.com/Codee-Hub/Developer-Task/blob/main/LICENSE).
 

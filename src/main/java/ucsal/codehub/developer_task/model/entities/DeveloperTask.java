@@ -29,9 +29,9 @@ public class DeveloperTask extends AssignedTask<Developer>{
         return "DeveloperTask{" +
                 ", name='" + name + '\'' +
                 ", id=" + id +
-                ", person=" + person +
-                ", status=" + status +
-                "skillLevel=" + skillLevel +
+                ", person= " + person +
+                ", status= " + status +
+                " skillLevel= " + skillLevel +
                 '}';
     }
 }

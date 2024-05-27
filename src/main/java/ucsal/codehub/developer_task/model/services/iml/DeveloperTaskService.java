@@ -136,8 +136,7 @@ public class DeveloperTaskService implements AssignedTaskService<DeveloperTask> 
         }
     }
 
-    @Override
-    public void updateTask(DeveloperTask task, DeveloperTask newTask) {
+    private void updateTask(DeveloperTask task, DeveloperTask newTask) {
      task.setName(newTask.getName());
      task.setSkillLevel(newTask.getSkillLevel());
      task.setPerson(newTask.getPerson());

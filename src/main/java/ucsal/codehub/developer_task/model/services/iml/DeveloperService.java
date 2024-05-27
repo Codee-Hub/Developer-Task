@@ -75,8 +75,8 @@ public class DeveloperService implements PersonService<Developer> {
         }
     }
 
-    @Override
-    public void updateData(Developer dev, Developer developer) {
+
+    private void updateData(Developer dev, Developer developer) {
     dev.setName(developer.getName());
     dev.setSkillLevel(developer.getSkillLevel());
     }

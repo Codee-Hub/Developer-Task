@@ -49,6 +49,7 @@ This project is a simple Java application for managing tasks and devs. Each task
 - [Zadriw](https://github.com/ZadriW) Adriano Abreu
 - [GuiLacerds](https://github.com/Guilacerds) Guilherme Andrade
 - [KailanDias](https://github.com/KailanDias) Kailan Souza
+- [FilipeSilva21](https://github.com/FilipeSilva21) Filipe Silva
 
 ## License
 
